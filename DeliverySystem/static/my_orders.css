@@ -1,0 +1,31 @@
+body{
+  background: linear-gradient(to bottom, #4CAF50, #2196F3);
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #343a40; 
+}
+
+.footer {
+  background-color: #343a40; 
+}
+
+.footer a {
+  color: #fff; 
+}
+
+table {
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+th, td {
+    color: white; 
+  }
+  
+.order-details-box {
+      border: 2px solid #ddd;
+      padding: 20px;
+      margin-top: 20px;
+  }
+

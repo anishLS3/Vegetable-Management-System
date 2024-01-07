@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #343a40; 
+}
+
+.footer {
+    background-color: #343a40; 
+}
+
+.footer a {
+    color: #fff; 
+}
+
+.content-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-group {
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Add any additional styles as needed */

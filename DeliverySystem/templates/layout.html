@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if title %}
+        <title>FreshFarmFinds - {{ title }}</title>
+    {% else %}
+        <title>FreshFarmFinds</title>
+    {% endif %}
+    <style>
+      body {
+             background: linear-gradient(to bottom, #4CAF50, #2196F3);
+           }
+    </style>
+</head>
+<body id="endblock_content">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+</body>
+</html>

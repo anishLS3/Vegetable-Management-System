@@ -1,0 +1,60 @@
+[
+  {
+    "order_id": "c994c5230c7641a68adf183028d011e1",
+    "order_date": "2023-12-26 23:43:55",
+    "first_name": "Anish",
+    "last_name": "L S",
+    "address": "123,Anna Nagar",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "postal_code": "600004",
+    "country": "India",
+    "phone_number": "97856 45678",
+    "email": "anishls03102004@gmail.com",
+    "payment_method": "credit_card",
+    "cart": {
+      "Brinjal": {
+        "quantity": 1,
+        "price": 32.0
+      },
+      "Capsicum": {
+        "quantity": 2,
+        "price": 50.0
+      }
+    },
+    "total_quantity": "3",
+    "total_price": "132.0",
+    "discount_percentage": "0",
+    "discounted_total_price": "132.0",
+    "status": "Ordered"
+  },
+  {
+    "order_id": "a2a3a04890304285a5525fe248cd1fc8",
+    "order_date": "2023-12-27 10:06:09",
+    "first_name": "Anish",
+    "last_name": "L S",
+    "address": "123, Ana Salai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "postal_code": "600003",
+    "country": "India",
+    "phone_number": "2455688888",
+    "email": "anishls03102004@gmail.com",
+    "payment_method": "credit_card",
+    "cart": {
+      "Brinjal": {
+        "quantity": 2,
+        "price": 32.0
+      },
+      "Capsicum": {
+        "quantity": 3,
+        "price": 50.0
+      }
+    },
+    "total_quantity": "5",
+    "total_price": "214.0",
+    "discount_percentage": "5",
+    "discounted_total_price": "203.3",
+    "status": "Shipped"
+  }
+]

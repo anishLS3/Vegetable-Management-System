@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #343a40; 
+}
+
+.footer {
+    background-color: #343a40; 
+}
+
+.footer a {
+    color: #fff; 
+}
+
+table {
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+th, td {
+    color: white; 
+  }

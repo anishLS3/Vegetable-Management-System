@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cart.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='cart.js') }}"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+              <a class="navbar-brand mr-4" href="/"><i class="fas fa-tractor"></i>FreshFarmFinds</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="{{ url_for('main.home') }}"><i class="fas fa-home"></i> Home</a>
+                    <a class="nav-item nav-link" href="{{ url_for('main.shop') }}"><i class="fas fa-shopping-cart"></i> Shop</a>
+                    <a class="nav-item nav-link" href="{{ url_for('main.about') }}"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a class="nav-item nav-link" href="{{ url_for('main.contact') }}"><i class="fas fa-envelope"></i> Contact Us</a>
+                  </div>
+                  <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="{{ url_for('main.shop') }}"><i class="fas fa-arrow-left"></i> Back</a>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="container">
+          <h3>Your Cart!</h3>
+          {% if session.cart %}
+              <table class="table" style="margin-top: 70px;">
+                  <thead>
+                      <tr>
+                          <th>Vegetable</th>
+                          <th>Quantity</th>
+                          <th>Price per kg</th>
+                          <th>Total Price</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {% for vegetable_name, cart_item in session.cart.items() %}
+                          <tr>
+                              <td>{{ vegetable_name }}</td>
+                              <td>{{ cart_item.quantity }}</td>
+                              <td>Rs{{ cart_item.price }}</td>
+                              <td>Rs{{ cart_item.quantity * cart_item.price }}</td>
+                              <td>
+                                <button class="btn btn-danger" onclick="removeItem('{{ vegetable_name }}')">Remove</button>
+                              </td>
+                          </tr>
+                      {% endfor %}
+                  </tbody>
+              </table>
+              <h3>Total</h3>
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Total Quantity</th>
+                          <th>Total Price</th>
+                          <th>Discount Applied</th>
+                          <th>Discounted Price</th>
+                      </tr>
+                  </thead>
+                  <tbody id="totalsTableBody" class="table-body">
+                      <tr>
+                          <td id="totalQuantity" class="quantity"></td>
+                          <td id="totalPrice" class="price"></td>
+                          <td id="discountApplied"></td>
+                          <td id="totalPriceAfterDiscount"></td>
+                      </tr>
+                  </tbody>
+              </table>
+              <button class="btn btn-success" onclick="checkout()">Checkout</button>
+          {% else %}
+          <div class="text-center my-5">
+            <h2>Your Cart is Empty</h2>
+            <p>Looks like you haven't added any items to your cart yet. Explore our shop and find delicious products to add to your cart!</p>
+            <a href="{{ url_for('main.shop') }}" class="btn btn-primary">Explore Shop</a>
+          </div>
+          {% endif %}
+        </div>
+        <footer class="text-center text-lg-start text-white" style="background-color:#343a40; width: 100%;">
+          <div class="footer-container p-4 pb-0">
+              <section class="">
+                  <div class="row footer-row">
+                      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                          <h6 class="text-uppercase mb-4 font-weight-bold">Fresh Farm Finds</h6>
+                          <p>
+                              Explore a variety of fruits, vegetables, and other farm finds directly from 
+                              local growers. Our commitment to freshness ensures you get the best quality produce.
+                          </p>
+                      </div>
+                      <hr class="w-100 clearfix d-md-none" />
+                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                          <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                          <p><a class="text-white">Fruits</a></p>
+                          <p><a class="text-white">Vegetables</a></p>
+                          <p><a class="text-white">Dry Fruits</a></p>
+                          <p></p><a class="text-white">dairy Products</a></p>
+                      </div>
+                      <hr class="w-100 clearfix d-md-none" />
+                      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                          <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                          <p><a class="text-white">Your Account</a></p>
+                          <p><a class="text-white">Become an Affiliate</a></p>
+                          <p><a class="text-white">Shipping Rates</a></p>
+                          <p><a class="text-white">Help</a></p>
+                      </div>
+                      <hr class="w-100 clearfix d-md-none" />
+                      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                          <p><i class="fas fa-home mr-3"></i>Kalavakam,OMR,Chennai,TN</p>
+                          <p><i class="fas fa-envelope mr-3"></i>FreshFarmFinds@gmail.com</p>
+                          <p><i class="fas fa-phone mr-3"></i>+ 91 95978 89023</p>
+                          <p><i class="fas fa-print mr-3"></i>+ 0424 234 567</p>
+                      </div>
+                  </div>
+              </section>
+              <hr class="my-3">
+                  <div class="row d-flex align-items-center">
+                      <div class="col-md-7 col-lg-8 text-center text-md-start">
+                          <div class="p-3">
+                              © 2023 Copyright:
+                              <a class="text-white" href="{{ url_for('main.home') }}">FreshFarmFinds</a>
+                          </div>
+                      </div>
+                      <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                          <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-google"></i></a>
+                          <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-instagram"></i></a>
+                          <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i class="fab fa-js"></i></a>
+                      </div>
+                  </div>
+              </section>
+          </div>
+        </footer>
+</body>
+{% endblock content %}
