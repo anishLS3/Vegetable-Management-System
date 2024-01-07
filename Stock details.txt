@@ -1,0 +1,38 @@
+Name,Description,Price,Number of Items,Image
+Beans,"Pods containing edible seeds, available in various colors and types.",25.0,21,beans.jpg
+Bracoli,"Green vegetable with clustered, flowering heads and thick stalks",35.0,20,bracoli.jpg
+Brinjal,"Purple, glossy vegetable with a spongy texture.",32.0,20,brinjal.jpg
+Cabbage,Leafy green or purple vegetable with tightly packed leaves.,29.0,20,cabbage.jpg
+Capsicum,"Hollow, colorful fruit with a mild flavor, available in various colors.",50.0,20,capsicum.jpg
+Carrot,"Orange root vegetable, known for its sweet taste.",70.0,20,carrot.jpg
+Cauliflower,"White, compact vegetable with a rounded head composed of undeveloped flower buds.",90.0,20,cauliflower.jpg
+Cucumber,"Cylindrical, green vegetable with crisp flesh and edible seeds.",78.0,20,cucumber.jpg
+Garlic,"Bulb made up of cloves, known for its pungent flavor and various culinary uses.",150.0,20,garlic.jpg
+Lady's Finger,"Green, elongated vegetable with a mucilaginous texture.",58.0,20,ladys_finger.jpg
+Onion,"Bulb vegetable with layers, available in various colors and flavors.",45.0,20,onoin.jpg
+Peas,Edible green seeds contained in pods.,80.0,20,Peas.jpg
+Potato,"Starchy tuber vegetable, available in various varieties and colors.",37.0,20,potato.jpg
+Pumpkin,"Orange or yellow squash with sweet, dense flesh.",120.0,20,pumpkin.jpg
+Red Chilli,Spicy pepper available in various sizes and heat levels.,68.0,20,red_chilli.jpg
+Spinach,"Dark green leafy vegetable, rich in nutrients.",80.0,20,spinach.jpg
+Tomato,"Red or other colored fruit with juicy flesh, used in various culinary applications.",39.0,20,tomato.jpg
+Turnip,Root vegetable with a white or purple exterior and a crisp texture.,49,20,turnip.jpg
+Name,Description,Price,Number of Items,Image
+Beans,"Pods containing edible seeds, available in various colors and types.",25.0,21,beans.jpg
+Bracoli,"Green vegetable with clustered, flowering heads and thick stalks",35.0,20,bracoli.jpg
+Brinjal,"Purple, glossy vegetable with a spongy texture.",32.0,20,brinjal.jpg
+Cabbage,Leafy green or purple vegetable with tightly packed leaves.,29.0,20,cabbage.jpg
+Capsicum,"Hollow, colorful fruit with a mild flavor, available in various colors.",50.0,20,capsicum.jpg
+Carrot,"Orange root vegetable, known for its sweet taste.",70.0,20,carrot.jpg
+Cauliflower,"White, compact vegetable with a rounded head composed of undeveloped flower buds.",90.0,20,cauliflower.jpg
+Cucumber,"Cylindrical, green vegetable with crisp flesh and edible seeds.",78.0,20,cucumber.jpg
+Garlic,"Bulb made up of cloves, known for its pungent flavor and various culinary uses.",150.0,20,garlic.jpg
+Lady's Finger,"Green, elongated vegetable with a mucilaginous texture.",58.0,20,ladys_finger.jpg
+Onion,"Bulb vegetable with layers, available in various colors and flavors.",45.0,20,onoin.jpg
+Peas,Edible green seeds contained in pods.,80.0,20,Peas.jpg
+Potato,"Starchy tuber vegetable, available in various varieties and colors.",37.0,20,potato.jpg
+Pumpkin,"Orange or yellow squash with sweet, dense flesh.",120.0,20,pumpkin.jpg
+Red Chilli,Spicy pepper available in various sizes and heat levels.,68.0,20,red_chilli.jpg
+Spinach,"Dark green leafy vegetable, rich in nutrients.",80.0,20,spinach.jpg
+Tomato,"Red or other colored fruit with juicy flesh, used in various culinary applications.",39.0,20,tomato.jpg
+Turnip,Root vegetable with a white or purple exterior and a crisp texture.,49,20,turnip.jpg
