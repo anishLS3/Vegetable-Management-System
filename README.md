@@ -1,5 +1,7 @@
 Vegetable Vendor Door-Delivery System__ This web-based application, built with Flask, HTML, CSS, and JavaScript, enables a small-scale vegetable vendor to efficiently manage door-delivery services. The system incorporates various design patterns for modularity, scalability, and maintainability.
 
+![Image Alt](https://github.com/anishLS3/Vegetable-Management-System/blob/16a8492f1270e048b6ad37fe70cc981f6e3e1539/FreshFarms.png)
+
 Features
 
 Daily Inventory: Maintain a daily list of available vegetables. Order Management: Accept customer orders with individual quantities, assigning unique order numbers for tracking. Billing: Generate bills for orders exceeding Rs. 100. Payment Confirmation: Confirm payments through notifications to both customers and the vendor. Order Modification: Disable order modification after payment confirmation. Real-time Updates: Communicate vegetable availability to customers during ordering. Delivery Notifications: Notify customers when orders are ready, providing tentative delivery times.
